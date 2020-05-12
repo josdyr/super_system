@@ -1,0 +1,8 @@
+<h2>My Wikis</h2>
+<ul class="wikis">
+  <li [class.selected]="wiki === selectedWiki" *ngFor="let wiki of wikis" (click)="onSelect(wiki)">
+    <span class="badge">{{wiki.id}}</span> {{wiki.name}}
+  </li>
+</ul>
+
+<app-wiki-detail [wiki]="selectedWiki"></app-wiki-detail>
